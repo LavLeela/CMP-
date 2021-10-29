@@ -1,4 +1,4 @@
-#include "pairClass.h"
+#include "pairClass2.h"
 #include <iostream>
 using namespace std;
 #include <string>
