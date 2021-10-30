@@ -24,9 +24,14 @@ pairClass::pairClass(){
 
 pairClass::pairClass(const pairClass& ToBeCopied){
 
-	id_=ToBeCopied.id_;
+	 id_.first= ToBeCopied.id_.first;
+         id_.second= new vector<double>;
 
+	(*(id_.second)).push_back((*(ToBeCopied.id_.second))[0]);
+        (*(id_.second)).push_back((*(ToBeCopied.id_.second))[1]);
+        (*(id_.second)).push_back((*(ToBeCopied.id_.second))[2]);
 
+      
         cout<< "Coordinate del vettore copiato:\t" << endl;
 	cout<<(*(id_.second))[0]<< endl;
         cout<< (*(id_.second)) [1]<< endl;
@@ -61,5 +66,25 @@ if ((id_.first == "Cartesian")  & (rhs.id_.first == "Cartesian")){
 
 
 else { cout<<"Implementazione non ancora disponibile"<<endl;}
+
+}
+
+
+const pairClass& pairClass::operator=(const pairClass& rhs) {
+
+      	id_.first= rhs.id_.first;
+        
+        (*(id_.second))[0] = (*(rhs.id_.second))[0];
+        (*(id_.second))[1] = (*(rhs.id_.second))[1];
+        (*(id_.second))[2] = (*(rhs.id_.second))[2];
+
+
+  cout<< "Coordinate del vettore a sinistra:\t" << endl;
+        cout<< id_.first << endl;
+        cout<<(*(id_.second))[0]<< endl;
+        cout<< (*(id_.second)) [1]<< endl;
+        cout<< (*(id_.second)) [2]<< endl; 
+
+  return *this;
 }
 

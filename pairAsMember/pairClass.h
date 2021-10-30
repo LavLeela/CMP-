@@ -12,7 +12,7 @@ class pairClass {
 	public:
 		pairClass();
 		pairClass(const pairClass& );	       
-                //std::pair<std::string, std::vector<double>*> getId const(){return id_;}; 
+                std::pair<std::string, std::vector<double>*> getId() const{return id_;}; 
 		pairClass(const std::string , const double , const double , const double);
 
 
@@ -29,10 +29,10 @@ class pairClass {
 		double getCoord1() const { return (*(id_.second))[0];};
                 double getCoord2() const {return  (*(id_.second))[1];};
 		double getCoord3() const   {return (*(id_.second))[2];};
-	
+		void setCoord2(double a) { (*(id_.second))[1]=a;} 
                pairClass  operator+( const pairClass& ) const;
 
-
+		const pairClass& operator=( const pairClass& rhs );
 
 
  	 private: 

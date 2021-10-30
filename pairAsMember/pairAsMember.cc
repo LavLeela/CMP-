@@ -20,9 +20,20 @@ int main () {
 
 
 pairClass p2("Cartesian", 1., 2., 7.);
-pairClass p3 ("Cartesian", 9., 8., 3.);
-pairClass p4 (p2+p3);
-cout<< endl<< "coordinate\t "<< p4.getSysOfCoordinates()<< ":\t"<< p4.getCoord1() <<"\t,\t" <<p4.getCoord2()<< "\t,\t" << p4.getCoord3()<< endl;
+cout <<endl << "getId2(p2):\t" << (p2.getId()).second << endl;
+
+//pairClass p3 ("Cartesian", 9., 8., 3.);
+pairClass p3 (p2);
+cout <<endl << "getId2 (p2):\t" << (p2.getId()).second << endl;
+
+cout <<endl << "getId2(p3):\t" << (p3.getId()).second << endl;
+
+p2.setCoord2(0.);
+cout<< endl<< "coordinate di p2\t "<< p2.getSysOfCoordinates()<< ":\t"<< p2.getCoord1() <<"\t,\t" <<p2.getCoord2()<< "\t,\t" << p2.getCoord3()<< endl;
+
+cout<< endl<< "coordinate di p3\t "<< p3.getSysOfCoordinates()<< ":\t"<< p3.getCoord1() <<"\t,\t" <<p3.getCoord2()<< "\t,\t" << p3.getCoord3()<< endl;
+
+
 
 return 0;
 }
