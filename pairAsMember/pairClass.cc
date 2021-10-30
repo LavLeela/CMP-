@@ -8,9 +8,9 @@ pairClass::pairClass(){
 	 
         id_.second = new vector<double> ;
 	id_.first = "Cartesian";
-	(*(id_.second)).push_back(0.);
-	(*(id_.second)).push_back(0.);
-	(*(id_.second)).push_back(0.);
+	(id_.second)->push_back(0.);
+	(id_.second)->push_back(0.);
+	(id_.second)->push_back(0.);
          //*(id_.second +2) = 12.;
 
   	  cout<< "id_.first = \t " <<id_.first<< endl;
@@ -27,9 +27,9 @@ pairClass::pairClass(const pairClass& ToBeCopied){
 	 id_.first= ToBeCopied.id_.first;
          id_.second= new vector<double>;
 
-	(*(id_.second)).push_back((*(ToBeCopied.id_.second))[0]);
-        (*(id_.second)).push_back((*(ToBeCopied.id_.second))[1]);
-        (*(id_.second)).push_back((*(ToBeCopied.id_.second))[2]);
+	(id_.second)->push_back((*(ToBeCopied.id_.second))[0]);
+        (id_.second)->push_back((*(ToBeCopied.id_.second))[1]);
+        (id_.second)->push_back((*(ToBeCopied.id_.second))[2]);
 
       
         cout<< "Coordinate del vettore copiato:\t" << endl;
@@ -43,9 +43,9 @@ pairClass::pairClass(const std::string System, const double a, const double b, c
 	id_.second = new vector<double> ;
         id_.first = System;
         
-	(*(id_.second)).push_back(a);
-        (*(id_.second)).push_back(b);
-        (*(id_.second)).push_back(c);
+	(id_.second)->push_back(a);
+        (id_.second)->push_back(b);
+        (id_.second)->push_back(c);
 
         cout<< "Vettore creato in coordinate\t" << System <<":" << endl;
         cout<<(*(id_.second))[0]<< endl;
